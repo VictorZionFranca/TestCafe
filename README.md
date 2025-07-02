@@ -18,12 +18,12 @@ Este projeto é um sistema web, com páginas de login, registro, dashboard, perf
 - Teste automatizado único cobrindo todo o fluxo do usuário
 
 ## Testes Realizados
-- Fluxo end-to-end: cadastro, login, dashboard, perfil, configurações, contato, logout
-- Login com e-mail não cadastrado
-- Registro com e-mail inválido
-- Editar perfil com campos obrigatórios vazios
-- Contato com e-mail inválido
-- Acesso ao dashboard sem login redireciona para login
+1. Fluxo end-to-end: cadastro, login, dashboard, perfil, configurações, contato, logout
+2. Login com e-mail não cadastrado
+3. Registro com e-mail inválido
+4. Editar perfil com campos obrigatórios vazios
+5. Contato com e-mail inválido
+6. Acesso ao dashboard sem login redireciona para login
 
 ---
 
