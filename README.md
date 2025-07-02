@@ -2,6 +2,12 @@
 
 Este projeto é um sistema web, com páginas de login, registro, dashboard, perfil, configurações, contato e testes automatizados usando TestCafe.
 
+# Sistema de Cadastro, Login e Dashboard com TestCafe
+
+> **O que é TestCafe?**
+>
+> TestCafe é uma ferramenta open source para automação de testes end-to-end (E2E) em aplicações web. Com ela, é possível simular interações reais do usuário (como cliques, preenchimento de formulários, navegação entre páginas, etc.) em diferentes navegadores, garantindo que o sistema funcione corretamente do ponto de vista do usuário final. O TestCafe é fácil de configurar, não depende de WebDriver, suporta múltiplos browsers (incluindo headless) e permite escrever testes em JavaScript ou TypeScript de forma simples e robusta. 
+
 ## Funcionalidades
 - Cadastro e login de usuários (com validação e feedback visual)
 - Dashboard protegido (mural de avisos por usuário)
