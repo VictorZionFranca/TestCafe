@@ -74,14 +74,6 @@ Para executar os testes automatizados, utilize o seguinte comando:
 npx testcafe chrome src/tests/
 ```
 
-## Contribuição
-
-Sinta-se à vontade para contribuir com melhorias ou correções. Crie um fork do repositório, faça suas alterações e envie um pull request.
-
-## Licença
-
-Este projeto está licenciado sob a MIT License. Veja o arquivo LICENSE para mais detalhes.
-
 ---
 
 ## Como rodar o projeto
