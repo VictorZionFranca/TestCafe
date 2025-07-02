@@ -5,19 +5,55 @@
     <meta charset="UTF-8">
     <title>Perfil do Usuário</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        header {
+            background: #2d3e50 !important;
+        }
+        .header-content nav a, .header-content h1 {
+            color: #fff !important;
+        }
+        .header-content nav a:hover {
+            background: #fff;
+            color: #2d3e50 !important;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Perfil do Usuário</h1>
-        <form id="profileForm">
-            <input type="text" id="nome" placeholder="Nome" required>
-            <input type="email" id="email" placeholder="E-mail" required>
-            <input type="password" id="senha" placeholder="Nova Senha (deixe em branco para não alterar)">
-            <button type="submit">Salvar Alterações</button>
-            <p id="erro" class="erro"></p>
-        </form>
-    </div>
+    <header>
+        <div class="header-content">
+            <h1>Meu Sistema</h1>
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="profile.html">Perfil</a>
+                <a href="settings.html">Configurações</a>
+                <a href="contact.html">Contato</a>
+                <a href="index.html" id="logout">Logout</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <h2 style="color:#222;">Perfil do Usuário</h2>
+            <form id="profileForm">
+                <input type="text" id="nome" placeholder="Nome">
+                <input type="text" id="email" placeholder="E-mail">
+                <input type="password" id="senha" placeholder="Nova Senha (deixe em branco para não alterar)">
+                <input type="tel" id="telefone" placeholder="Telefone">
+                <input type="date" id="nascimento" placeholder="Data de Nascimento">
+                <div style="margin-bottom: 18px;">
+                    <label for="foto">Foto de Perfil:</label>
+                    <input type="file" id="foto" accept="image/*">
+                    <img id="foto-preview" src="" alt="Preview" style="max-width:80px; display:none; margin-top:5px;" />
+                </div>
+                <button type="submit">Salvar Alterações</button>
+                <p id="erro" class="erro"></p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 Meu Sistema. Todos os direitos reservados.
+    </footer>
     <script src="scripts.js"></script>
 </body>
 

@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
-    <title>Bem-vindo</title>
+    <title>Contato</title>
     <link rel="stylesheet" href="style.css">
     <style>
         .header-content h1 { color: #fff !important; }
     </style>
 </head>
-
 <body>
     <header>
         <div class="header-content">
@@ -25,14 +23,19 @@
     </header>
     <main>
         <section class="container">
-            <h2 style="color:#222;">Login realizado com sucesso!</h2>
-            <p>Bem-vindo ao sistema.</p>
-            <a href="dashboard.html" class="button">Ir para o Painel de Controle</a>
+            <h2 style="color:#222;">Contato</h2>
+            <form id="contactForm">
+                <input type="text" id="contato-nome" placeholder="Seu nome">
+                <input type="text" id="contato-email" placeholder="Seu e-mail">
+                <input type="text" id="contato-assunto" placeholder="Assunto">
+                <textarea id="contato-mensagem" placeholder="Mensagem"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
         </section>
     </main>
     <footer>
         &copy; 2024 Meu Sistema. Todos os direitos reservados.
     </footer>
+    <script src="scripts.js"></script>
 </body>
-
-</html>
+</html> 

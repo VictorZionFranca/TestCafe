@@ -5,21 +5,48 @@
     <meta charset="UTF-8">
     <title>Painel de Controle</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .header-content h1 { color: #fff !important; }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Dashboard</h1> <!-- Corrigido para bater com o teste -->
-        <div class="user-info">
-            <p>Usuário: teste@exemplo.com</p>
+    <header>
+        <div class="header-content">
+            <h1>Meu Sistema</h1>
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="profile.html">Perfil</a>
+                <a href="settings.html">Configurações</a>
+                <a href="contact.html">Contato</a>
+                <a href="index.html" id="logout">Logout</a>
+            </nav>
         </div>
-        <nav>
-            <a href="profile.html">Profile</a>
-            <a href="index.html" id="logout">Logout</a>
-        </nav>
-        <h2>Informações Relevantes</h2>
-        <p>Aqui você pode visualizar suas estatísticas e informações importantes.</p>
-    </div>
+    </header>
+    <main>
+        <section class="container" style="margin-bottom: 0;">
+            <h2 style="color:#222;">Bem-vindo ao Dashboard</h2>
+            <div class="user-info" style="margin-bottom: 24px;">
+                <p id="user-nome">Usuário: </p>
+                <p id="user-email"></p>
+            </div>
+            <hr>
+            <h3 style="color:#222;">Informações Relevantes</h3>
+            <p>Aqui você pode visualizar suas estatísticas e informações importantes.</p>
+        </section>
+        <section class="container" id="mural-section">
+            <h2 style="color:#222;">Mural de Avisos</h2>
+            <form id="muralForm">
+                <textarea id="mensagemMural" placeholder="Escreva um aviso..." required></textarea>
+                <button type="submit">Postar Aviso</button>
+            </form>
+            <ul id="lista-mensagens"></ul>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 Meu Sistema. Todos os direitos reservados.
+    </footer>
+    <script src="scripts.js"></script>
 </body>
 
 </html>

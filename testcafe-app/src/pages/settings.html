@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
-    <title>Bem-vindo</title>
+    <title>Configurações</title>
     <link rel="stylesheet" href="style.css">
     <style>
         .header-content h1 { color: #fff !important; }
     </style>
 </head>
-
 <body>
     <header>
         <div class="header-content">
@@ -25,14 +23,26 @@
     </header>
     <main>
         <section class="container">
-            <h2 style="color:#222;">Login realizado com sucesso!</h2>
-            <p>Bem-vindo ao sistema.</p>
-            <a href="dashboard.html" class="button">Ir para o Painel de Controle</a>
+            <h2 style="color:#222;">Configurações</h2>
+            <form id="settingsForm">
+                <label for="tema">Tema:</label>
+                <select id="tema" name="tema">
+                    <option value="claro">Claro</option>
+                    <option value="escuro">Escuro</option>
+                </select>
+                <br>
+                <label for="notificacoes">
+                    <input type="checkbox" id="notificacoes" name="notificacoes">
+                    Receber notificações
+                </label>
+                <br><br>
+                <button type="submit">Salvar Preferências</button>
+            </form>
         </section>
     </main>
     <footer>
         &copy; 2024 Meu Sistema. Todos os direitos reservados.
     </footer>
+    <script src="scripts.js"></script>
 </body>
-
-</html>
+</html> 
