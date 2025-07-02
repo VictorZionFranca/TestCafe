@@ -13,6 +13,14 @@ Este projeto é um sistema web, com páginas de login, registro, dashboard, perf
 - Navegação moderna e responsiva
 - Teste automatizado único cobrindo todo o fluxo do usuário
 
+## Testes Realizados
+ √ Fluxo end-to-end: cadastro, login, dashboard, perfil, configurações, contato, logout
+ √ Login com e-mail não cadastrado
+ √ Registro com e-mail inválido
+ √ Editar perfil com campos obrigatórios vazios
+ √ Contato com e-mail inválido
+ √ Acesso ao dashboard sem login redireciona para login
+
 ---
 
 ## Estrutura do Projeto

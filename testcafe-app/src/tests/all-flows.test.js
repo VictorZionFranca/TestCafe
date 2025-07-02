@@ -175,5 +175,12 @@ test('Acesso ao dashboard sem login redireciona para login', async t => {
     await t.wait(800);
     await t.navigateTo('http://127.0.0.1:5500/testcafe-app/src/pages/dashboard.html');
     await t.wait(800);
+    // Verifica se está na tela de login
     await t.expect(Selector('h2').withText('Login').exists).ok();
+    // Verifica se a URL realmente é a de login
+    await t.expect(await t.eval(() => window.location.pathname)).contains('index.html');
+    // Garante que não existe nenhum elemento do dashboard
+    await t.expect(Selector('h2').withText('Bem-vindo ao Dashboard').exists).notOk();
+    // Garante que não há usuário logado no localStorage
+    await t.expect(await t.eval(() => localStorage.getItem('usuarioLogado'))).eql(null);
 }); 
