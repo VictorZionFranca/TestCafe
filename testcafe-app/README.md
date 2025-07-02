@@ -1,6 +1,19 @@
-# TestCafe App
+# Sistema de Cadastro, Login e Dashboard com TestCafe
 
-Este projeto é uma aplicação web simples que utiliza TestCafe para realizar testes automatizados. A aplicação consiste em um sistema de login, registro de usuários, visualização e edição de perfil, e um painel de controle.
+Este projeto é um sistema web, com páginas de login, registro, dashboard, perfil, configurações, contato e testes automatizados usando TestCafe.
+
+## Funcionalidades
+- Cadastro e login de usuários (com validação e feedback visual)
+- Dashboard protegido (mural de avisos por usuário)
+- Edição de perfil (com upload de foto, telefone, data de nascimento)
+- Página de configurações (tema claro/escuro, notificações)
+- Página de contato (formulário de mensagem)
+- Modo escuro real para todo o sistema
+- Banners de feedback para sucesso e erro
+- Navegação moderna e responsiva
+- Teste automatizado único cobrindo todo o fluxo do usuário
+
+---
 
 ## Estrutura do Projeto
 
@@ -46,7 +59,7 @@ testcafe-app
 
 Para executar os testes automatizados, utilize o seguinte comando:
 ```
-npx testcafe chrome src/tests/*.test.js
+npx testcafe chrome src/tests/
 ```
 
 ## Contribuição
@@ -56,3 +69,96 @@ Sinta-se à vontade para contribuir com melhorias ou correções. Crie um fork d
 ## Licença
 
 Este projeto está licenciado sob a MIT License. Veja o arquivo LICENSE para mais detalhes.
+
+---
+
+## Como rodar o projeto
+
+1. **Clone o repositório e abra a pasta**
+2. **Abra o diretório `testcafe-app` em seu editor**
+3. **Abra o arquivo `index.html` com Live Server, VSCode Live Preview, ou outro servidor local**
+   - O endereço padrão será algo como: `http://127.0.0.1:5500/testcafe-app/src/pages/index.html`
+
+---
+
+## Como funciona o fluxo do sistema
+
+1. **Cadastro:**
+   - Acesse "Registrar" na tela de login.
+   - Preencha nome, e-mail e senha.
+   - O sistema valida o e-mail e mostra um banner de sucesso ou erro.
+   - Após cadastro, redireciona para o login.
+
+2. **Login:**
+   - Informe e-mail e senha cadastrados.
+   - Se correto, vai para o dashboard.
+   - Se errado, mostra banner de erro.
+
+3. **Dashboard:**
+   - Exibe mural de avisos do usuário logado.
+   - Permite postar e deletar avisos.
+   - Navegação para perfil, configurações, contato e logout.
+
+4. **Perfil:**
+   - Exibe e permite editar nome, e-mail, telefone, data de nascimento e foto.
+   - Valida campos obrigatórios e e-mail duplicado.
+   - Mostra banner de sucesso ou erro.
+
+5. **Configurações:**
+   - Permite escolher tema claro/escuro e ativar notificações.
+   - Preferência de tema é salva e aplicada em todas as páginas.
+
+6. **Contato:**
+   - Formulário para enviar mensagem.
+   - Valida e-mail e campos obrigatórios.
+   - Mostra banner de sucesso ou erro.
+
+7. **Logout:**
+   - Limpa o login e retorna para a tela de login.
+
+---
+
+## Modo Escuro
+- O tema escuro pode ser ativado nas configurações.
+- A escolha é salva no navegador e aplicada automaticamente em todas as páginas.
+- O visual muda para tons escuros e azulados, com contraste otimizado.
+
+---
+
+## Banners de Feedback
+- Mensagens de sucesso e erro aparecem no topo da tela (ex: registro realizado, e-mail inválido, campos obrigatórios).
+- Todos os formulários usam banners para feedback ao usuário e para facilitar testes automatizados.
+
+---
+
+## Teste Automatizado End-to-End
+
+O arquivo `src/tests/all-flows.test.js` cobre todo o fluxo do usuário, incluindo cenários extras de erro.
+
+### Como rodar o teste:
+
+1. **Certifique-se de que o servidor local está rodando** (ex: Live Server)
+2. **No terminal, execute:**
+   ```bash
+   npx testcafe chrome src/tests/all-flows.test.js
+   ```
+   Ou para rodar em modo headless:
+   ```bash
+   npx testcafe chrome:headless src/tests/all-flows.test.js
+   ```
+
+- O teste executa cadastro, login, dashboard, perfil, configurações, contato, logout e vários cenários de erro.
+- Há uma espera de 800ms entre cada ação para facilitar a visualização.
+
+---
+
+## Dicas para manutenção
+- Toda a validação é feita via JavaScript, sem required ou type="email" nos inputs.
+- O tema escuro é salvo no localStorage e aplicado em todas as páginas.
+- Para adicionar mais testes, basta criar novos arquivos em `src/tests/` ou adicionar cenários ao `all-flows.test.js`.
+- Para alterar o tempo de espera dos testes, edite os valores de `t.wait(800)`.
+
+---
+
+## Contato
+Se tiver dúvidas ou quiser sugerir melhorias, fique à vontade para abrir uma issue ou contribuir!
